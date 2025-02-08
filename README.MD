@@ -3,7 +3,7 @@
 
 A brief description of what this project does and who it's for
 
-```markdown
+
 # Event Management Platform
 
 A full-stack event management platform where users can register, log in (using Email/Password, Google, or Guest Login), create events, and view/join events in real time. This project features a responsive design with a polished white, black, and light blue color palette.
