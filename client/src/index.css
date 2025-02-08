@@ -1,0 +1,116 @@
+/* client/src/index.css */
+
+/* ----- Color Variables ----- */
+:root {
+  --primary-color: #1e90ff;       /* Light Blue */
+  --background-color: #ffffff;    /* White */
+  --text-color: #000000;          /* Black */
+  --border-color: #dcdcdc;        /* Light Gray for borders */
+  --hover-color: #0f78d1;         /* Darker blue for hover effects */
+}
+
+/* ----- Global Styles ----- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* ----- Navbar Styles ----- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid var(--border-color);
+  backdrop-filter: blur(10px);
+}
+
+.navbar a {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+  color: var(--primary-color);
+}
+
+/* ----- Button Styles ----- */
+.button {
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background: var(--hover-color);
+}
+
+/* ----- Form Container ----- */
+.form-container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background: var(--background-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container input,
+.form-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+}
+
+.form-container button {
+  width: 100%;
+}
+
+/* ----- Event Card Styles ----- */
+.event-card {
+  border: 1px solid var(--border-color);
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  transition: transform 0.2s ease;
+}
+
+.event-card:hover {
+  transform: scale(1.02);
+}
+
+/* ----- Dashboard Styles ----- */
+.dashboard {
+  padding: 20px;
+}
+
+.dashboard h2 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+/* ----- Responsive Design ----- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+}
