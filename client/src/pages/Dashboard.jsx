@@ -40,10 +40,9 @@ function Dashboard() {
   return (
     <div>
       <Navbar />
-      <div style={{ padding: '2rem' }}>
+      <div className="dashboard">
         <h2>User Dashboard</h2>
-        <div style={{ marginBottom: '1rem' }}>
-          <h3>Filters</h3>
+        <div className="filters">
           <div>
             <label>Category:</label>
             <input 
@@ -54,7 +53,7 @@ function Dashboard() {
               onChange={handleFilterChange} 
             />
           </div>
-          <div style={{ marginTop: '0.5rem' }}>
+          <div>
             <label>Date:</label>
             <input 
               type="date" 
@@ -64,14 +63,13 @@ function Dashboard() {
             />
           </div>
         </div>
-        <div>
-          <h3>Events</h3>
+        <div className="events">
           {filteredEvents.length > 0 ? (
             filteredEvents.map((event) => (
               <EventCard key={event.id} event={event} currentUser={user} />
             ))
           ) : (
-            <p>No events found.</p>
+            <p className="no-events">No events found.</p>
           )}
         </div>
       </div>
